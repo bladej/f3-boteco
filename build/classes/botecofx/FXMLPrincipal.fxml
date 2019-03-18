@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="PanePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BFD5DB;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="botecofx.FXMLPrincipalController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#evtComanda" text="Comanda" />
+              <MenuItem mnemonicParsing="false" onAction="#evtProdutos" text="Produtos" />
+                  <MenuItem mnemonicParsing="false" onAction="#evtUnidade" text="Unidade" />
+                  <MenuItem mnemonicParsing="false" onAction="#evtGarcon" text="Garcon" />
+                  <MenuItem mnemonicParsing="false" onAction="#evtCategoria" text="Categoria" />
+                  <MenuItem mnemonicParsing="false" onAction="#evtTipoPagto" text="Tipo de Pagamento" />
+                  <MenuItem mnemonicParsing="false" onAction="#evtClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Pagamento">
+            <items>
+              <MenuItem fx:id="btnPagar" mnemonicParsing="false" onAction="#clkBtnPagar" text="Pagar Conta" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox fx:id="VBoxProd" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

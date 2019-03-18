@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane fx:id="PaneCadComanda" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="800.0" style="-fx-background-color: #C6CBE1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="botecofx.FXMLCadComandaController">
+   <items>
+      <VBox prefHeight="500.0" prefWidth="786.0" style="-fx-background-color: #528593;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="798.0" spacing="50.0" style="-fx-background-color: #BFD5DB;">
+               <children>
+                  <JFXButton fx:id="btnNovo" onAction="#clkBtnNovo" style="-fx-background-color: #719CA8; -fx-background-radius: 40;" text="Novo" />
+                  <JFXButton fx:id="btnAlterar" onAction="#clkBtnAlterar" style="-fx-background-color: #719CA8; -fx-background-radius: 40;" text="Alterar" />
+                  <JFXButton fx:id="btnApagar" onAction="#clkBtnApagar" style="-fx-background-color: #719CA8; -fx-background-radius: 40;" text="Apagar" />
+                  <JFXButton fx:id="BtnConfirmar" onAction="#clkBtnConfirmar" style="-fx-background-color: #719CA8; -fx-background-radius: 40;" text="Gravar" />
+                  <JFXButton fx:id="BtnCancelar" onAction="#clkBtnCancelar" style="-fx-background-color: #719CA8; -fx-background-radius: 40;" text="Cancelar" />
+               </children>
+            </HBox>
+            <AnchorPane fx:id="PaneDados" prefHeight="330.0" prefWidth="798.0" style="-fx-background-color: #98BAC3;">
+               <children>
+                  <JFXTextField fx:id="txtcod" labelFloat="true" layoutX="74.0" layoutY="32.0" prefHeight="31.0" prefWidth="216.0" promptText="Codigo" />
+                  <JFXTextField fx:id="txtnome" labelFloat="true" layoutX="450.0" layoutY="111.0" prefHeight="25.0" prefWidth="240.0" promptText="Nome" />
+                  <JFXTextField fx:id="txtvalor" labelFloat="true" layoutX="450.0" layoutY="268.0" prefHeight="25.0" prefWidth="216.0" promptText="Valor" />
+                  <JFXTextField fx:id="txtdescr" labelFloat="true" layoutX="450.0" layoutY="194.0" prefHeight="25.0" prefWidth="240.0" promptText="Descrição" />
+                  <JFXComboBox fx:id="CbGarcon" layoutX="450.0" layoutY="35.0" prefHeight="25.0" prefWidth="240.0" promptText="Garcon" />
+                  <JFXTextField fx:id="txtnumero" labelFloat="true" layoutX="74.0" layoutY="108.0" prefHeight="31.0" prefWidth="216.0" promptText="Numero" />
+                  <JFXDatePicker fx:id="datacom" layoutX="74.0" layoutY="194.0" prefHeight="25.0" prefWidth="193.0" promptText="Data" />
+                  <JFXTextField fx:id="txtstatus" labelFloat="true" layoutX="74.0" layoutY="265.0" prefHeight="31.0" prefWidth="216.0" promptText="Status" />
+               </children>
+            </AnchorPane>
+            <VBox fx:id="PanePesquisa" prefHeight="58.0" prefWidth="798.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="58.0" prefWidth="798.0" spacing="270.0" style="-fx-background-color: #BFD5DB;">
+                     <children>
+                        <JFXTextField fx:id="TxtPesquisa" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="396.0" promptText="Informe o nome do produto" />
+                        <JFXButton fx:id="btnPesquisar" onAction="#clkBtnPesquisar" style="-fx-background-color: #719CA8; -fx-background-radius: 40;" text="Pesquisar" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <TableView fx:id="TabelaPesquisa" onMouseClicked="#clkTabela" prefHeight="151.0" prefWidth="798.0" style="-fx-background-color: #528593;">
+               <columns>
+                  <TableColumn fx:id="colcod" prefWidth="71.0" text="Codigo" />
+                  <TableColumn fx:id="colgar" prefWidth="77.0" text="Garcon_Id" />
+                  <TableColumn fx:id="colnum" prefWidth="94.0" text="Numero" />
+                  <TableColumn fx:id="colnome" prefWidth="161.0" text="Nome" />
+                  <TableColumn fx:id="colvalor" minWidth="0.0" prefWidth="72.0" text="Valor" />
+                  <TableColumn fx:id="coldata" maxWidth="191.0" prefWidth="112.0" text="Data" />
+                  <TableColumn fx:id="coldescr" prefWidth="148.0" text="Descricao" />
+                  <TableColumn fx:id="colstatus" prefWidth="57.0" text="Status" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </items>
+</SplitPane>
